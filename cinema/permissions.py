@@ -1,7 +1,7 @@
 from rest_framework.permissions import BasePermission, SAFE_METHODS
 
 
-class IsAdminAllORIsAuthenticatedOrReadOnly(BasePermission):
+class IsAdminOrIfAuthenticatedReadOnly(BasePermission):
     """
     The request is authenticated as an
     admin - read/write, if as a user - read only request.
